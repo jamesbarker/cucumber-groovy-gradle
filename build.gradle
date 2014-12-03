@@ -1,0 +1,39 @@
+apply plugin: "groovy"
+apply plugin: "java"
+
+repositories { mavenCentral() }
+
+dependencies {
+	compile "org.codehaus.groovy:groovy-all:2.3.7"
+
+	testCompile "info.cukes:cucumber-java:1.2.0"
+	testCompile "info.cukes:cucumber-groovy:1.2.0"
+	testCompile "info.cukes:cucumber-junit:1.2.0"
+	testCompile "info.cukes:gherkin:2.12.2"
+
+
+	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:2.43.1"
+}
+
+configurations {
+	cucumberRuntime { extendsFrom testRuntime }
+}
+
+task cucumber() {
+	dependsOn assemble, compileTestJava
+	doLast {
+		javaexec {
+			main = "cucumber.api.cli.Main"
+			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+			args = [
+				'--plugin',
+				'pretty',
+				'--tags', 
+				'~@wip',
+				'--glue',
+				'src/test/groovy',
+				'src/test/resources'
+			]
+		}
+	}
+}
