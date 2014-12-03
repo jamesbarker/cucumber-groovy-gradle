@@ -1,7 +1,8 @@
-Cucumber JVM with Gradle and Groovy
+Cucumber JVM with Gradle and Groovy Skeleton
 
-Make sure you have Java JDK, Gradle and Groovy installed.
+You will need to have Java JDK, Gradle and Groovy installed on your system.
 
-Then run from a command line:
+From a command line run:
+```
 gradle cucumber
-
+```
