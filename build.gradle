@@ -10,9 +10,6 @@ dependencies {
 	testCompile "info.cukes:cucumber-groovy:1.2.0"
 	testCompile "info.cukes:cucumber-junit:1.2.0"
 	testCompile "info.cukes:gherkin:2.12.2"
-
-
-	testCompile "org.seleniumhq.selenium:selenium-firefox-driver:2.43.1"
 }
 
 configurations {
