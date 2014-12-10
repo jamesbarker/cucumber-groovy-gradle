@@ -1,4 +1,7 @@
-Feature: Add
+Feature: Calculator
+As a user
+I want calculation functions
+So that I can calculate
 
 Scenario: Add using Java source object
 Given I have a Java based adder
