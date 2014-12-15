@@ -14,7 +14,7 @@ configurations {
 }
 
 task cucumber() {
-	dependsOn assemble
+	dependsOn testClasses
 	doLast {
 		javaexec {
 			main = "cucumber.api.cli.Main"
