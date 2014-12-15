@@ -15,6 +15,6 @@ Then I get 4
 
 @wip
 Scenario: Example scenario that is not ready to automate (hence the @wip tag)
-Given I have a Groovy based multiplier 
+Given I have a Groovy based adder 
 When I multiply 3 with 3
 Then I get 9
