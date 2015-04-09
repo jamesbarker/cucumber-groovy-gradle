@@ -4,7 +4,7 @@ apply plugin: "java"
 repositories { mavenCentral() }
 
 dependencies {
-	compile "org.codehaus.groovy:groovy-all:2.3.7"
+	compile "org.codehaus.groovy:groovy-all:2.4.3"
 	testCompile "info.cukes:cucumber-groovy:1.2.0"
 	testCompile "info.cukes:gherkin:2.12.2"
 }
@@ -27,4 +27,8 @@ task cucumber() {
 			]
 		}
 	}
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.3'
 }
