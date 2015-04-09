@@ -4,5 +4,9 @@ You will need to have Java JDK and Gradle installed on your system and system pa
 
 From a command line run:
 ```
-gradle cucumber
+  ./gradlew cucumber
+```
+From windows run:
+```
+   gradlew.bat cucumber
 ```
